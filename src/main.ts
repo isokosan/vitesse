@@ -21,8 +21,8 @@ export const createApp = ViteSSG(
   App,
   { routes },
   async(ctx) => {
-    if (!ctx.isClient)
-      await ctx.router.isReady()
+//     if (!ctx.isClient)
+//       await ctx.router.isReady()
 
     // install all modules under `modules/`
     Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(ctx))
